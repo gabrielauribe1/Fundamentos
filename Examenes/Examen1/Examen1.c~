@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main (void)
+{
+  int num, dig, suma;
+{
+do
+{
+printf("Introduzca un numero: ");
+scanf("%d", &num);
+if(num<0)
+printf("*Introduzca un numero que sea positivo  \n");
+}
+while (num<0);
+}
+}

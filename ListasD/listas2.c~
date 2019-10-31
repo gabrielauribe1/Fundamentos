@@ -1,0 +1,27 @@
+//programa que coloque los datos en medio y los ordene de menor a mayor
+
+typedef struct defdato
+{
+  int dato;
+  struct defdato*sig;
+} tipodato;
+
+void InsertaMedio(tipodato **Inicio);
+void Ordena(tipodato *Inicio);
+
+int main(void)
+{
+  int primernum;
+  tipodato primero=NULL;
+
+  printf("Inserte el primer numero de la lista:\n");
+  scanf("%d", &primernum);
+  printf("Inserte numeros (letra para terminar)\n");
+  while(scanf("%d", &valor)==1)
+    InsertaMedio(&primero, numero);
+}
+void InsertaMedio(tipodato **Inicio)
+{
+  tipodato *temp;
+  temp=Inicio;
+  

@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+void leer(int fecha1, int fecha2);
+void fecha(int fecha1, int fecha2, int mes[], int dia, int *d, int *m, int *a);
+void calcular(int fecha1, int fecha2, int mes[], int dia, int *d, int *m, int *a);
+
+int main(void)
+{
+  int fecha1, fecha2;
+  int mes[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  int f = 0;
+  int d, m, a;
+  int dd, mm, aa;
+  int total = 0;
+  leer(fecha1, fecha2);
+  fecha(fecha1, fecha2, mes, dia, &d, &m, &a, dd, mm, aa);
+  calcula(fecha1, fecha2, mes, dia, d, m, a, &dd, &mm, &aa);
+  printf("El numero de días entre las fechas es:", total);
+}
+void leer(int fecha1, int fecha2)
+{
+  printf("Introduzca las fechas como indica a continuación, sin espacios y sin diagonales \n");
+  printf("Introduzca la primera fecha: \n");
+  scanf("%d", &fecha1);
+  printf("Introduzca la segunda fecha: \n");
+  scanf("%d", &fecha2);
+}  
+void fecha(int fecha1, int fecha2, int mes[], int dia, int *d, int *m, int *a)
+{
+ *d = Fecha/1000000;
+ *m = (Fecha%1000000)/10000;
+ *a = Fecha%10000;
+ if ((*m >= 1 && *m <= 12) && (*d > 0 && *d <= dias[*m-1]))
+   {
+*f=0;
+   }
+ else
+   {
+*f=1;
+   }
+}
+void calculo(int d, int m, int a, int dd, int mm, int aa, int*dt )
+{
+int i=(aa*365)+(mm-1)*30+dd;
+int j=(a*365)+(m-1)*30+d;
+ *total=i-j;
+}

@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main (void)
+{
+  int a,b,c,d,*e;
+  printf("introduzca 4 numeros separados por comas: ");
+  scanf("%d,%d,%d,%d",&a,&b,&c,&d);
+  if(a>=b)
+    *e=a;
+  if(b>=c)
+    *e=b;
+  if(c>=d)
+    *e=c;
+  if(d>=a)
+    *e=d;
+  printf("el numero mayor es %d \n",*e);
+}

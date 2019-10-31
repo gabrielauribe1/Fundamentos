@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+
+void leer(char frase[]);
+void centro(char frase[]),
+
+int main (void)
+{
+    char frase[200];
+    leer(frase);
+    centro(frase);
+}
+void leer(char frase[])
+{
+    printf("Introduzca la frase de la que desee eliminar lo del centro: \n");
+    gets(frase);
+}
+void centro(char frase[])
+{
+    int i, j, a;
+    for(i=0; frase[i]=' '; i++)
+    printf("%c ", frase[i]);
+    for(j=strlen(frase); i>=0; i--)
+    {
+        if(frase[j]==' ')
+        {
+            for(a=j+1; frase[a]!='\0';a++)
+            printf("%c", frase[a]);
+        }
+    }
+}

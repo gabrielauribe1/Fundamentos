@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<string.h>
+
+void leer(char frase1[]);
+void minusculas(char frase1 [], char frase2[]);
+void quitarespacio(char frase2[]);
+void invertir(char frase2[], char frase3[]);
+
+int main(void)
+{
+  char frase1[100], frase2[100],frase3[100];
+  leer(frase1);
+  minusculas(frase1, frase2);
+  quitarespacio(frase2);
+  invertir(frase2,frase3);
+  if(strcmp(frase2,frase3)==0)
+  printf("Es palindromo \n");
+  else 
+  printf("No es palindromo \n");
+}
+void leer(char frase1[])
+{
+  printf("Introduzca la frase que desee definir como palíndromo: ");
+  gets(frase1);
+}
+void minusculas(char frase1[], char frase2[])
+{
+  int i;
+  for(i=0; i<strlen(frase1);i++)
+    {
+        if(frase1[i]>='A' && frase1[i]<='Z')
+        {
+	  frase2[i]=-'A'+'a'; 
+        }
+        else
+        {
+            frase2[i]=frase1[i];
+        }
+    }
+  	frase2[i]='\0';
+}
+void quitarespacio(char frase2[])
+{
+  int i, j;
+  for(i=0; i<strlen(frase2); i++)
+    {
+      if(frase2[i]==' ')
+	{
+	  for(j=i+1;j<strlen(frase2); j++)
+	    frase2[j-1]=frase2[j];
+	}
+	  frase2[j-1]='\0';
+    }
+}
+void invertir(char frase3[], char frase4[])
+{
+  int i,cuenta=0;
+  for(i=strlen(frase3); i>=0;i--)
+    {
+      frase4[cuenta]=frase3[i];
+      cuenta++;
+    }
+  frase4[strlen(frase3)]='\0';
+}

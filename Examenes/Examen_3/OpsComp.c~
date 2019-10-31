@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+typedef struct defNumerosComplejos
+{
+  int operacion[200];
+  int reales;
+  int imaginarios;
+}tipo_complejo;
+
+void LeerDatos(tipo_complejo operacion[], int argc, char *argv[);
+void Suma();
+void Resta();
+void multiplicacion();
+void division();
+
+int main (int argc, char *argv[])
+{
+  if(argc==2)
+    {
+      LeerDatos();
+    }
+  else
+    printf("Se introdujeron argumentos inválidos \n")
+    
+}
+void LeerDatos(tipo_complejo operacion[], int argc, char *argv[])
+{
+  int i;
+  char operacion;
+  argv[1]=operacion;
+  printf("%s", operacion);
+}
+
+  

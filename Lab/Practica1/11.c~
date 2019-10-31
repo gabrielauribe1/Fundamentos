@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main (void)
+{
+  int num, mayor=0;
+  do
+    {
+  printf("Introduzca número, -99 para terminar: \n");
+  scanf("%d",num);
+  if (num<=0)
+    {
+      if(num>mayor)
+	mayor=num;
+    }
+    }
+  while (num!=-99);
+  printf("el numero mayor es %d", mayor);
+}
+
+  

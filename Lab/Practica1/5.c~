@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main (void)
+{
+  float base, altura, area
+    {
+  printf("Introduzca la base del triángulo: ");
+  scanf("%f",base);
+  {
+  if (base==0)
+    printf("la base no puede ser 0");
+  }
+  if (base!=0)
+    {
+    printf("Introduzca la altura del triángulo: ");
+    scanf("%f",altura);
+    }
+  if (altura==0)
+    {
+    printf("la altura no puede ser 0");
+    }
+  while(altura!=0)
+    prrintf("la superficie el triangulo es %f",(base*altura)/2);
+    }
+}

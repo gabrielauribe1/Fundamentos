@@ -1,0 +1,25 @@
+#include <stdio.h>
+void valores ();
+void intercambia (int *a, int *b, int *c);
+int main (void)
+{
+  int a, b, c, sup;
+  valores ();
+  intercambia(int *a, int *b, int *c);
+}
+void valores ()
+{
+  int x,y,z
+  printf("Introduzca 3 valores separados por comas: \ņ");
+  scanf("%d,%d,%d",&a,&b,&c);
+  printf("los valores intercambiados son %d, %d, %d");
+} 
+void intercambia (int *a, int *b, int *c)
+{
+  int sup;
+  *a=*b;
+  *b=*c;
+  *c=tap;
+}
+
+  

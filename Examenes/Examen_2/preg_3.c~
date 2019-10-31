@@ -1,0 +1,38 @@
+#include<stdio.h>
+
+void pedirnum(int decimal, int opcion);
+void convertir(int decimal, int opcion);
+int main (void);
+{
+
+  int decimal, opcion;
+  pedirnum(decimal, opcion);
+  convertir(decimal, opcion);
+}
+void pedirnum();
+{
+  printf("Introduzca el numero en decimal que desee cambiar: \n");
+  scanf("%d", decimal);
+  printf("Seleccione la opcion de conversión: 1.Binario\n2.Base 3\n3.Base 4\n4.Base 5\n5.Base 6\n6.Base 7\n7.Base 8\n8.Base 9\n9.Base 11\n10.Base 12\n11.Base 13\n12.Base 14\n13.Base 15\n14.Base 16\n ");
+  scanf("%d", opcion);
+}
+void convertir(int decimal, int opcion)
+{
+  switch(opcion)
+    {
+    case 1: 
+      int i=0, bin[20], acum=0;
+      do
+	{
+	  bin[i]=decimal%2;
+	  decimal=decimal/2;
+	  i++;
+	}
+      while(decimal!=1);
+      bin[i]=1;
+      acum=i;
+      for(i=acum; i>=0; i--)
+	printf("%d", bin[i]);
+      break;
+    }
+}

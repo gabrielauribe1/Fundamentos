@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<string.h>
+
+typedef struct defcoordenadas
+{
+  int x, y;
+ 
+}tipocoordenadas;
+
+void leer_coordenadas(tipocoordenadas *p1, tipocoordenadas p2*);
+
+int main (void)
+{
+  tipocoordenadas punto1, punto2;
+  leer_coordenadas(coordenadas);
+  imprimir_formula(coordenadas);
+}
+void leer_coordenadas(tipocoordenadas x[2], tipocoordenadas y[2])
+{
+  int i;
+  for(i=0; i<2; i++)
+    {
+      printf("Introduzca la coordenada x %d:\n", i+1);
+      scanf("%d", &coordenadas.x[i]);
+      printf("Introduzca la coordenada y  %d:\n", i+1);
+      scanf("%d", &coordenadas.y[i]);
+    }
+}
+void imprimir_formula(tipocoordenadas coordenadas)
+{
+  int i;
+  int m=0, restay=0, restax=0;
+  m=(coordenadas.y[1]-coordenas.y[0])/(coordenadas.x[1]-coordenas.x[0]);
+  
+
+      
+
+   

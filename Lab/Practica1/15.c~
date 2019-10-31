@@ -1,0 +1,22 @@
+#include<stdio.h>
+void leernum (int num*, int potencia*);
+void elevar (int num, int potencia, int *resultado);
+int main (void)
+{
+  int num, potencia, resultado;
+  leernum(&a,&b);
+  elevar(num,potencia,&resultado);
+}
+void leernum (int *num, int *potencia)
+{
+  printf("Introduzca el número que desea elevar: \n");
+  scanf("%d", num);
+  printf("Introduzca la potencia: \n");
+  scanf("%d", potencia);
+}
+void elevar (int num, int potencia, int *resultado)
+{
+  int i;
+  for(i=1, i<=potencia, i++);
+  *resultado=num;
+}

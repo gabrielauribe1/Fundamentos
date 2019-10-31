@@ -1,0 +1,16 @@
+#include<stdio.h>
+void calcula (int num[100][100]);
+
+int main(void)
+{
+  int num[100][100];
+  calcula(numero);
+}
+void calcula (int num[100][100])
+{
+  int i, j;
+  for (i=0;i<100;i++)
+    printf("El número es: %d", i+1);
+  for (j=0;j<100; j++)
+    printf("Su cuadrado es: %d", j*j);
+}

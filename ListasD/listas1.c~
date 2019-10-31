@@ -1,0 +1,56 @@
+#include<stdo.h>
+
+typedef struct defdato
+{
+  int dato;
+  struct defdato*sig;
+} tipodato;
+
+void InsertaInicio(tipodato **Inicio, int numero);
+void Imprime(tipodato *Inicio);
+void BorrarLista(tipodato *Inicio);
+
+int main (void)
+{
+  tipodato *primero=NULL;
+  int valor;
+  printf("Inserte numeros (letra para terminar)\n");
+  while(scanf("%d", &valor)==1)
+    InsertaInicio(&primero, valor);
+  printf("Los valores introducidos son:\n");
+  Imprime(primero);
+  BorrarLista(primero);
+}
+void InsertaInicio(tipodato **Inicio, int numero)
+{
+  tipodato *temp;
+  temp=(tipodato *)malloc(sizeof(tipodato));
+  temp->dato=numero;
+  temp->sig = *Inicio;
+  *Inicio=temp;
+}
+void Imprime(tipodato *Inicio)
+{
+  tipodato *temp;
+  temp=Inicio;
+  while(temp!=NULL)
+    {
+      printf("%d\n",temp->dato);
+      temp=temp->sig;
+    }
+}
+
+void BorrarLista(tipodato *Inicio)
+{		 
+tipodato *temp;
+  temp=Inicio;
+  while(temp!=NULL)
+    {
+      Inicio=Inicio->sig;
+      free(temp);
+      temp=Inicio;
+    }
+}
+
+
+

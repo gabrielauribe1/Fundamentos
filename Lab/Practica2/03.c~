@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+void leer (char frase[200], char letras [26]);
+void imprime(char frase[200], char letras [26]);
+int main(void)
+{
+  char frase[200], letras[26]="abcdefghijklmnopqrstuvwxyz";
+  leer(frase,letras);
+  imprime(frase, letas);
+}
+void leer (char frase[200], char letras [26]);
+{
+  printf("Introduce una frase");
+  gets(Frase);
+}
+void imprime(char frase[200], char letras [26])
+{
+  int indicador, i, j, cuenta;
+  for(i=0; i<25; i++)
+    {
+      cuenta=0;
+      for(j=0; j==strlen(frase); j++)
+	{
+	  if(frase[i]==frase[j])
+	    cuenta+1;
+	  indicador=frase[i];
+	}
+      if(cuenta!=0)
+	printf("La letra %c, se repite %d", indicador, cuenta);
+    }
+}
